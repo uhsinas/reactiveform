@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4" style="margin-top: 80px;"> 
+<div class="border container">
+            
+            <form [formGroup]="registerForm" action="" class=" p-5">
+                <h2 class="text-center">Register Form</h2>
+<!-- name -->
+            <div class=" m-3 ">
+                   <input  class="form-control" formControlName="uname" name="uname" type="text" placeholder="Name">
+            </div>
+
+            <div *ngIf="this.registerForm.get('uname')?.touched && this.registerForm.get('uname')?.errors" class=" m-3" style="color: red;">Invalid Username</div>
+<!-- address -->
+            <div class=" m-3 ">
+                   <textarea class="form-control" formControlName="address" name="address" type="text" placeholder="Address">
+            </div>
+
+            <div *ngIf="this.registerForm.get('address')?.touched && this.registerForm.get('address')?.errors" class=" m-3" style="color: red;">Invalid Username</div>
+
+<!-- dob -->
+             <div class=" m-3 ">
+                   <input  class="form-control" formControlName="dob" name="uname" type="date" placeholder="Date Of Birth">
+            </div>
+
+
+<!-- role -->
+            <div class=" m-3 ">
+                   <input  class="form-control" formControlName="role" name="role" type="" placeholder="Role">
+                    <select name="" id="place">
+                    <option value="">admin</option>
+                    <option value="">manager</option>
+                    <option  selected value="">developer</option>
+            
+                   
+            
+                    </select>
+            </div>
+
+<!-- phone -->
+
+            <div class=" m-3 ">
+                   <input  class="form-control" formControlName="phone" name="phone" type="number" placeholder="Phone Number">
+            </div>
+
+<!-- gender -->
+
+            <div class=" m-3 ">
+                   <input  class="form-control" formControlName="gender" name="gender" type="radio" id="female" placeholder="Gender">
+                  
+                    <label for="male">male</label>
+                   <label for="feamle">female</label> 
+          </div>
+
+
+
+    <div class="  m-3">
+                <input class="btn btn-primary" type="button" (click)="register()" value="register"></div>
+          
+                <a href="employee">Employee Details</a>
+
+           </form>
+
+        </div>  
+         
+     </div>
+    <div class="col-lg-4"></div>
+    </div>
